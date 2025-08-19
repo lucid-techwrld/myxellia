@@ -10,6 +10,8 @@ import {
   Calendar,
 } from "lucide-react";
 
+import logo from "../assets/logo/myxellia_io_logo.jpeg";
+
 import NavItem from "./navItem";
 interface HeaderProps {
   onBudgetClick: () => void;
@@ -21,7 +23,9 @@ const header: React.FC<HeaderProps> = ({ onBudgetClick, onCalendarClick }) => {
       {/* Logo and Nav Items */}
       <div className="flex items-center space-x-8">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-white rounded-full"></div>
+          <div className="w-8 h-8 bg-white rounded-full overflow-hidden">
+            <img src={logo} alt="myxellia logo" className="object-contain" />
+          </div>
           <span className="text-xl font-bold">myxellia</span>
         </div>
         <nav className="hidden md:flex items-center space-x-6">
